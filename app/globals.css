@@ -2,27 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+ * Warm dark-editorial palette.
+ *
+ * The design treats --ink / --paper as a light↔dark duality: --ink is both the
+ * primary text AND the background of "feature" sections (bg-ink text-paper),
+ * while --paper is both light surfaces AND the text on those sections. Flipping
+ * the meaning of these two tokens (ink → warm off-white, paper → warm near-
+ * black) plus darkening --bg inverts the entire site coherently. A pleasant
+ * consequence: the old dark feature sections render as light cream panels
+ * inside the dark page — the editorial light/dark rhythm.
+ */
 :root {
-  --bg: #f5f1ea;
-  --bg-alt: #ede7db;
-  --paper: #fdfbf6;
-  --ink: #1a1815;
-  --ink-soft: #3a362f;
-  --muted: #6b6458;
-  --accent: #c4551a;
-  --accent-deep: #8f3e13;
-  --status-green: #2d7a3e;
+  --bg: #14110d;        /* warm near-black page */
+  --bg-alt: #1b1611;    /* subtly raised dark section */
+  --paper: #221d16;     /* "the dark color": raised panels + text on cream */
+  --ink: #ece6da;       /* "the light color": primary text + cream panels */
+  --ink-soft: #c4bcab;  /* dimmed light text */
+  --muted: #968b7d;     /* tertiary labels/eyebrows */
+  --accent: #e0673a;    /* rust-orange, brightened for dark */
+  --accent-deep: #c4551a; /* hover / pressed accent */
+  --status-green: #3fa05a;
 
   /* Channel triplets for Tailwind alpha-value support (text-accent/25 etc.) */
-  --bg-rgb: 245 241 234;
-  --bg-alt-rgb: 237 231 219;
-  --paper-rgb: 253 251 246;
-  --ink-rgb: 26 24 21;
-  --ink-soft-rgb: 58 54 47;
-  --muted-rgb: 107 100 88;
-  --accent-rgb: 196 85 26;
-  --accent-deep-rgb: 143 62 19;
-  --status-green-rgb: 45 122 62;
+  --bg-rgb: 20 17 13;
+  --bg-alt-rgb: 27 22 17;
+  --paper-rgb: 34 29 22;
+  --ink-rgb: 236 230 218;
+  --ink-soft-rgb: 196 188 171;
+  --muted-rgb: 150 139 125;
+  --accent-rgb: 224 103 58;
+  --accent-deep-rgb: 196 85 26;
+  --status-green-rgb: 63 160 90;
 }
 
 @layer base {

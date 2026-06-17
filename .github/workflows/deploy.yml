@@ -35,7 +35,7 @@ jobs:
         env:
           # Canonical URLs, sitemap, and OG metadata base.
           # For a project repo, set this to https://<user>.github.io/<repo>.
-          NEXT_PUBLIC_SITE_URL: https://kylerlee759.github.io/website
+          NEXT_PUBLIC_SITE_URL: https://kylerlee759.github.io
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
